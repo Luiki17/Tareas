@@ -36,6 +36,18 @@ El proyecto está orientado a aprender y aplicar buenas prácticas en desarrollo
 - Protección de rutas según autenticación.
 - Formularios protegidos contra CSRF.
 - Vista personalizada según si el usuario está autenticado o no.
+## 📌 Funcionalidades principales
 
-## 📁 Estructura del proyecto
+- CRUD de usuarios, retos y logros.
+- Gestión desde vistas con formularios y validaciones.
+- Seguridad con login/logout.
+- Interfaz adaptativa y clara.
+- DTOs para transportar datos entre capas de forma limpia.
+- Excepciones personalizadas para errores controlados.
 
+## ⚙️ Configuración
+
+### Requisitos previos
+- Java 21
+- Maven
+- MySQL instalado
