@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Retos Activos</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Header -->
+<div th:replace="fragments/header :: header"></div>
+
+<div class="container py-4">
+    <h1 class="h2">Retos Activos</h1>
+
+    <ul class="list-group">
+        <li th:each="r : ${retos}" class="list-group-item d-flex justify-content-between align-items-center">
+            <a th:href="@{|/retos/${r.id}|}" th:text="${r.titulo}" class="h5 text-decoration-none"></a>
+            <span class="badge bg-secondary">
+          del <span th:text="${r.fechaInicio}"></span> al <span th:text="${r.fechaFin}"></span>
+        </span>
+        </li>
+    </ul>
+</div>
+
+<!-- Footer -->
+<div th:replace="fragments/footer :: footer"></div>
+
+<!-- Bootstrap JS (opcional si usarás algún componente dinámico) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
